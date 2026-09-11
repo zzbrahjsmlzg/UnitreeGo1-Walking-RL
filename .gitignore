@@ -1,0 +1,20 @@
+# Python 缓存
+__pycache__/
+*.pyc
+*.pyo
+
+# 训练日志
+logs/
+*.log
+
+# 模型文件（除了最终模型，其他都不上传）
+*.zip
+!models/unitree_final_optimized.zip
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
