@@ -57,3 +57,11 @@ demo.py      快速演示脚本
 - MuJoCo
 - PyTorch
 - stable-baselines3
+
+## ONNX 推理
+
+本项目支持 ONNX 推理，不依赖 Stable-Baselines3：
+
+```bash
+python deploy/export_onnx.py   # 导出 ONNX
+python deploy/inference.py     # ONNX 推理
