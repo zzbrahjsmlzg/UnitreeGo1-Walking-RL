@@ -42,6 +42,7 @@ python train.py
 
 ```bash
 python deploy/export_onnx.py
+```
 
 ## 快速演示
 
