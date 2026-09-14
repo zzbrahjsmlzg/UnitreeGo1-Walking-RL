@@ -27,14 +27,6 @@ class UnitreeEnv(Env):
 
     def reset(self, seed=None, options=None):
         mujoco.mj_resetData(self.model, self.data)
-        
-        # 域随机化：每次 reset 随机改变物理参数
-        # 1. 质量扰动：±8%
-        self.model.body_mass[:] *= np.random.uniform(0.92, 1.08)
-        
-        # 2. 摩擦扰动：±15%
-        self.model.geom_friction[:, 0] *= np.random.uniform(0.85, 1.15)
-        
         self.step_count = 0
         self.prev_x = self.data.qpos[0]
         self.prev_action = np.zeros(12)
