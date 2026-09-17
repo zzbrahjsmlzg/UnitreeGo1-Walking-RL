@@ -1,7 +1,7 @@
 from stable_baselines3 import PPO
 from env.unitree_env import UnitreeEnv
 
-model = PPO.load('models/unitree_final_optimized')
+model = PPO.load("models/unitree_robust")
 env = UnitreeEnv()
 env.max_steps = 1000
 
